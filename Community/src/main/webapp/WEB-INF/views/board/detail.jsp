@@ -6,12 +6,12 @@
 	<a href="/board/list?category=${requestScope.data.category}">돌아가기</a>
 </div>
 
-<div>
-<c:if test="${requestScope.data.userPk == sessionScope.loginUser.userpk}">
-	<button>수정</button>
-	<button id="btnDel">삭제</button>
+<c:if test="${requestScope.data.userPk == sessionScope.loginUser.userPk}">
+	<div>
+		<button>수정</button>
+		<button id="btnDel">삭제</button>
+	</div>
 </c:if>	
-</div>
 
 <div id="data" data-pk="${requestScope.data.boardPk }" data-category="${requestScope.data.category }">
 	<div>번호: ${requestScope.data.seq}</div>
@@ -22,6 +22,4 @@
 	<label>${requestScope.data.ctnt}</label>
 </div>
 
-<div>
-	<input id="updateBtn" type="submit" value="수정">
-</div>
+<script src="/res/js/board/detail.js"></script>

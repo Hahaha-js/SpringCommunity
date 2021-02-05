@@ -11,6 +11,8 @@ public class UserEntity {
 	private String nm;
 	private int gender;
 	private String regDt;
+	
+	
 	public int getUserPk() {
 		return userPk;
 	}

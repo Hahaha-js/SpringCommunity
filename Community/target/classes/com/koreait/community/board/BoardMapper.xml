@@ -13,8 +13,8 @@
 	
 	<select id="selBoardList" resultType="BoardDomain">
 		SELECT 
-		A.boardPk, A.seq, A.title, A.hits, A.regDt
-		, A.userPk, B.nm as writerNm
+			A.boardPk, A.seq, A.title, A.hits, A.regDt
+			, A.userPk, B.nm AS writerNm
 		FROM t_board A
 		INNER JOIN t_user B
 		ON A.userPk = B.userPk
